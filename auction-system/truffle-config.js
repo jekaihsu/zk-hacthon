@@ -1,6 +1,8 @@
 require('dotenv').config();
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
+console.log("Mnemonic:", process.env.MNEMONIC); // 這行會在終端中打印出助記詞
+
 const { MNEMONIC, INFURA_PROJECT_ID } = process.env;
 
 module.exports = {

@@ -8,13 +8,25 @@
 </head>
 <body>
     <div id="app">
-        <h1>Auction System</h1>
-        <div>
-            <label for="bidAmount">Enter your bid amount:</label>
-            <input type="number" id="bidAmount" />
-            <button onclick="submitBid()">Submit Bid</button>
-        </div>
-        <div id="highestBidInfo" style="margin-top: 20px;"></div>
+        <header>
+            <h1>Auction System</h1>
+        </header>
+        
+        <section class="bid-section">
+            <h2>Submit Your Bid</h2>
+            <form id="bidForm">
+                <label for="bidAmount">Enter your bid amount (ETH):</label>
+                <input type="number" id="bidAmount" step="0.01" placeholder="0.00" required />
+                <button type="submit" id="submitBid">Submit Bid</button>
+            </form>
+        </section>
+
+        <section class="result-section">
+            <h2>Current Highest Bid</h2>
+            <div id="highestBidInfo">
+                <p>No bids submitted yet.</p>
+            </div>
+        </section>
     </div>
 
     <script src="script.js"></script>
